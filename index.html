@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Job Search Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My Job Applications</h1>
+    <table id="job-table">
+      <thead>
+        <tr>
+          <th>Job Title</th>
+          <th>Company</th>
+          <th>Applied Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="job-table-body">
+        <!-- Job entries will be populated here -->
+      </tbody>
+    </table>
+
+    <form id="add-job-form">
+      <h2>Add New Job Listing</h2>
+      <label for="job-title">Job Title:</label>
+      <input type="text" id="job-title" name="job_title" required>
+      <br>
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company" required>
+      <br>
+      <label for="applied-date">Applied Date:</label>
+      <input type="date" id="applied-date" name="applied_date" required>
+      <br>
+      <label for="status">Status:</label>
+      <select id="status" name="status">
+        <option value="Applied">Applied</option>
+        <option value="Interview Scheduled">Interview Scheduled</option>
+        <option value="Offer Received">Offer Received</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+      <br>
+      <button type="submit">Add Job</button>
+      <!-- Reset button moved here to be next to Add Job button -->
+      <button id="reset-jobs" type="button">Reset Jobs</button> <!-- Ensure type="button" to prevent form submission -->
+    </form>
+
+    <form id="mark-complete-form">
+      <h2>Mark Job Complete</h2>
+      <label for="completion-date">Completion Date:</label>
+      <input type="date" id="completion-date" name="completion_date" required>
+      <br>
+      <label for="completion-notes">Completion Notes (optional):</label>
+      <textarea id="completion-notes" name="completion_notes" rows="4" placeholder="Enter any notes about completing this job"></textarea>
+      <br>
+      <button type="submit">Mark Complete</button>
+    </form>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
